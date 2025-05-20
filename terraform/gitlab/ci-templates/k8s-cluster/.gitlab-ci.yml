@@ -104,7 +104,7 @@ prepare:image:
   script:
     - /kaniko/executor
       --context "${CI_PROJECT_DIR}/.gitlab/ci"
-      --cache=true
+      --cache=false
       --dockerfile "${CI_PROJECT_DIR}/.gitlab/ci/Dockerfile"
       --destination "${CI_REGISTRY_IMAGE}:${DOCKER_TAG}"
 
